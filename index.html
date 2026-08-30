@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0f0a" />
+  <meta name="description" content="Règlement officiel du serveur GTA RP Last RP." />
+  <title>Last RP — Règlement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --bg:#070a07;
+  --panel:#0d120d;
+  --panel2:#111811;
+  --line:#223023;
+  --text:#eef5ed;
+  --muted:#8f9e8f;
+  --green:#7dff5b;
+  --green2:#36d81c;
+  --danger:#ff6f5d;
+  --shadow:0 24px 70px rgba(0,0,0,.38);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:linear-gradient(rgba(255,255,255,.014) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.014) 1px,transparent 1px);background-size:42px 42px;pointer-events:none;mask-image:linear-gradient(to bottom,black,transparent 70%);z-index:-2}
+.noise{position:fixed;inset:0;opacity:.035;pointer-events:none;z-index:99;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E")}
+.glow{position:fixed;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:-1}.glow-one{width:420px;height:420px;background:rgba(90,255,65,.08);top:-160px;right:-100px}.glow-two{width:400px;height:400px;background:rgba(90,255,65,.045);bottom:10%;left:-180px}
+a{color:inherit;text-decoration:none}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(22px,5vw,76px);border-bottom:1px solid rgba(255,255,255,.06);background:rgba(7,10,7,.82);backdrop-filter:blur(16px);position:sticky;top:0;z-index:50}.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--green);color:var(--green);font-family:Oswald,sans-serif;font-size:24px;font-weight:700;transform:skew(-6deg);box-shadow:inset 0 0 18px rgba(125,255,91,.08),0 0 25px rgba(125,255,91,.08)}.brand-copy{display:flex;flex-direction:column;gap:1px}.brand-copy strong{font-family:Oswald,sans-serif;letter-spacing:1.8px;font-size:18px}.brand-copy small{font-size:9px;letter-spacing:2px;color:var(--muted)}.topnav{display:flex;gap:34px;color:#bbc6bb;font-size:13px;font-weight:600}.topnav a:hover{color:var(--green)}.discord-btn,.primary-btn{background:var(--green);color:#091008;font-weight:800;border:0}.discord-btn{padding:11px 19px;font-size:12px;letter-spacing:.4px}.discord-btn:hover,.primary-btn:hover{background:#a5ff8d}.hero{min-height:690px;display:flex;flex-direction:column;justify-content:center;max-width:1380px;margin:auto;padding:72px clamp(22px,7vw,110px);position:relative}.hero::after{content:"LAST";position:absolute;right:-15px;top:56%;transform:translateY(-50%);font-family:Oswald,sans-serif;font-size:clamp(150px,28vw,410px);font-weight:700;letter-spacing:-18px;color:transparent;-webkit-text-stroke:1px rgba(125,255,91,.055);z-index:-1}.hero-eyebrow,.section-kicker{font-size:11px;letter-spacing:2.4px;font-weight:800;color:var(--green)}.hero-eyebrow{display:flex;align-items:center;gap:10px}.hero-eyebrow span{width:34px;height:1px;background:var(--green)}.hero h1{font-family:Oswald,sans-serif;margin:20px 0 22px;font-size:clamp(56px,8vw,118px);line-height:.92;letter-spacing:-2.6px;max-width:960px}.hero h1 em{font-style:normal;color:transparent;-webkit-text-stroke:1px rgba(238,245,237,.42)}.hero>p{max-width:660px;color:#a7b2a7;font-size:16px;line-height:1.75}.hero-actions{display:flex;gap:12px;margin-top:28px}.primary-btn,.ghost-btn{min-height:48px;padding:0 22px;display:inline-flex;align-items:center;justify-content:center;gap:16px;font-size:12px;letter-spacing:.3px;cursor:pointer}.ghost-btn{border:1px solid var(--line);background:rgba(255,255,255,.018);color:var(--text)}.ghost-btn:hover{border-color:#4a604a}.hero-stats{display:flex;gap:52px;margin-top:64px}.hero-stats div{display:flex;flex-direction:column}.hero-stats strong{font-family:Oswald,sans-serif;font-size:25px}.hero-stats span{font-size:10px;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted);margin-top:3px}.rule-shell{max-width:1380px;margin:0 auto 110px;display:grid;grid-template-columns:250px 1fr;border-top:1px solid var(--line);padding:0 clamp(22px,5vw,76px)}.sidebar{padding:42px 24px 0 0;position:sticky;top:76px;height:calc(100vh - 76px);overflow:auto}.sidebar-label{font-size:9px;letter-spacing:2px;color:#657165;margin-bottom:18px}.sidebar nav{display:flex;flex-direction:column;gap:3px}.category-link{border-left:1px solid #273227;color:#889488;font-size:12px;padding:9px 12px;transition:.2s}.category-link:hover,.category-link.active{border-left-color:var(--green);color:var(--text);background:linear-gradient(90deg,rgba(125,255,91,.08),transparent)}.sidebar-help{margin-top:30px;border:1px solid var(--line);padding:15px;display:flex;gap:11px;align-items:flex-start;background:rgba(255,255,255,.015)}.status-dot{margin-top:5px;width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}.sidebar-help div{display:flex;flex-direction:column;gap:4px}.sidebar-help strong{font-size:11px}.sidebar-help small{font-size:9px;line-height:1.45;color:var(--muted)}.content{border-left:1px solid var(--line);padding:42px 0 0 44px}.content-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:26px}.content h2,.sanctions h2,.lexique h2{font-family:Oswald,sans-serif;font-size:clamp(36px,5vw,58px);line-height:1;margin:9px 0 0;letter-spacing:-1px}.search-wrap{min-width:min(390px,100%);height:44px;border:1px solid var(--line);background:#0b100b;display:flex;align-items:center;padding:0 12px;gap:10px}.search-wrap:focus-within{border-color:#4b7147;box-shadow:0 0 0 3px rgba(125,255,91,.05)}.search-wrap svg{width:16px;fill:none;stroke:#7f8d7f;stroke-width:1.7}.search-wrap input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--text);font-family:inherit;font-size:12px}.search-wrap input::placeholder{color:#657165}.search-wrap kbd{font-family:inherit;font-size:9px;color:#697669;border:1px solid #2d392d;padding:3px 5px}.notice{border:1px solid rgba(125,255,91,.19);background:linear-gradient(90deg,rgba(125,255,91,.075),rgba(125,255,91,.015));padding:18px 20px;display:flex;gap:14px;margin-bottom:32px}.notice-icon{width:28px;height:28px;display:grid;place-items:center;border:1px solid var(--green);color:var(--green);font-family:Oswald,sans-serif}.notice strong{font-size:12px}.notice p{margin:5px 0 0;font-size:11px;color:#9caa9c;line-height:1.55}.rule-list{display:flex;flex-direction:column;gap:18px}.rule-category{scroll-margin-top:110px}.category-header{display:flex;align-items:center;justify-content:space-between;margin:18px 0 12px;border-bottom:1px solid var(--line);padding-bottom:12px}.category-header h3{font-family:Oswald,sans-serif;text-transform:uppercase;font-size:22px;letter-spacing:.4px;margin:0}.category-header span{font-size:9px;color:#667266;letter-spacing:1.3px}.rule-card{background:var(--panel);border:1px solid #202b20;padding:20px 22px;display:grid;grid-template-columns:34px 1fr;gap:14px;transition:.18s}.rule-card:hover{background:var(--panel2);border-color:#334133;transform:translateY(-1px)}.rule-icon{width:29px;height:29px;display:grid;place-items:center;border:1px solid #324332;color:var(--green);font-size:11px;font-weight:800}.rule-card h4{margin:1px 0 7px;font-size:13px}.rule-card p{margin:0;color:#9aa69a;font-size:11.5px;line-height:1.65}.rule-card .tag{display:inline-flex;margin-top:10px;color:#6e7a6e;font-size:8.5px;letter-spacing:1px;text-transform:uppercase}.rule-card.important{border-left:2px solid var(--green)}.rule-card.danger{border-left:2px solid var(--danger)}.rule-card.danger .rule-icon{color:var(--danger);border-color:rgba(255,111,93,.36)}mark{background:rgba(125,255,91,.16);color:#dfffd6;padding:0 2px}.empty-state{text-align:center;border:1px dashed #293329;padding:55px 20px;color:var(--muted)}.empty-state div{font-size:34px}.empty-state h3{color:var(--text);font-size:16px}.empty-state p{font-size:11px}.sanctions,.lexique{max-width:1230px;margin:0 auto 110px;padding:0 clamp(22px,5vw,76px)}.section-intro{max-width:620px;color:var(--muted);font-size:12px;line-height:1.6;margin:14px 0 28px}.sanction-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}.sanction-grid article{padding:28px 24px;min-height:190px;border-right:1px solid var(--line);background:linear-gradient(150deg,#0d120d,#090d09)}.sanction-grid article:last-child{border-right:0}.sanction-grid span{font-family:Oswald,sans-serif;color:var(--green);font-size:11px}.sanction-grid h3{font-family:Oswald,sans-serif;text-transform:uppercase;font-size:22px;margin:32px 0 8px}.sanction-grid p{color:var(--muted);font-size:10.5px;line-height:1.6}.lexique-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}.lexique-item{border:1px solid var(--line);padding:20px;background:rgba(255,255,255,.014)}.lexique-item strong{font-family:Oswald,sans-serif;font-size:17px;text-transform:uppercase}.lexique-item p{font-size:10.5px;line-height:1.6;color:var(--muted);margin:7px 0 0}footer{max-width:1230px;margin:auto;padding:36px clamp(22px,5vw,76px);border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;color:#687468;font-size:9px;letter-spacing:.5px}.footer-brand{display:flex;align-items:center;gap:10px}.brand-mark.small{width:31px;height:31px;font-size:18px}.footer-brand>div{display:flex;flex-direction:column}.footer-brand strong{font-family:Oswald,sans-serif;color:var(--text);letter-spacing:1px}.footer-brand small{margin-top:2px}.search-hidden{display:none!important}
+@media(max-width:960px){.topnav{display:none}.rule-shell{grid-template-columns:1fr}.sidebar{position:relative;top:0;height:auto;padding:24px 0 18px;overflow:auto}.sidebar nav{flex-direction:row;overflow:auto;padding-bottom:4px}.category-link{white-space:nowrap;border-left:0;border-bottom:1px solid #273227}.category-link:hover,.category-link.active{border-left:0;border-bottom-color:var(--green);background:none}.sidebar-help{display:none}.content{border-left:0;border-top:1px solid var(--line);padding:30px 0 0}.content-head{align-items:stretch;flex-direction:column}.search-wrap{width:100%;min-width:0}.sanction-grid{grid-template-columns:1fr 1fr}.sanction-grid article:nth-child(2){border-right:0}.sanction-grid article:nth-child(-n+2){border-bottom:1px solid var(--line)}.lexique-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.topbar{height:66px}.brand-copy small{display:none}.discord-btn{padding:9px 13px}.hero{min-height:640px;padding-top:50px}.hero h1{font-size:54px;letter-spacing:-1.4px}.hero>p{font-size:13px}.hero-actions{flex-direction:column;align-items:stretch}.primary-btn,.ghost-btn{width:100%}.hero-stats{gap:28px;margin-top:46px}.hero-stats strong{font-size:21px}.rule-shell{padding:0 18px}.content{padding-top:25px}.search-wrap kbd{display:none}.rule-card{padding:17px;grid-template-columns:28px 1fr}.rule-icon{width:26px;height:26px}.sanction-grid,.lexique-grid{grid-template-columns:1fr}.sanction-grid article{border-right:0;border-bottom:1px solid var(--line)}.sanction-grid article:last-child{border-bottom:0}footer{flex-direction:column;gap:22px;text-align:center}.hero::after{display:none}}
+
+</style>
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#accueil" aria-label="Accueil Last RP">
+      <span class="brand-mark">L</span>
+      <span class="brand-copy"><strong>LAST RP</strong><small>RÈGLEMENT OFFICIEL</small></span>
+    </a>
+    <nav class="topnav">
+      <a href="#reglement">Règlement</a>
+      <a href="#sanctions">Sanctions</a>
+      <a href="#lexique">Lexique</a>
+    </nav>
+    <a class="discord-btn" href="#" id="discordLink" aria-label="Discord Last RP">Discord</a>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-eyebrow"><span></span> BIENVENUE SUR LAST RP</div>
+      <h1>LE RÈGLEMENT<br><em>DE LA DERNIÈRE CHANCE.</em></h1>
+      <p>Last RP repose sur un rôleplay cohérent, immersif et équitable. En rejoignant le serveur, tu acceptes l'ensemble des règles ci-dessous.</p>
+      <div class="hero-actions">
+        <a href="#reglement" class="primary-btn">Lire le règlement <span>↓</span></a>
+        <button class="ghost-btn" id="openSearch">Rechercher une règle</button>
+      </div>
+      <div class="hero-stats">
+        <div><strong>12</strong><span>catégories</span></div>
+        <div><strong>RP</strong><span>avant tout</span></div>
+        <div><strong>24/7</strong><span>fair-play</span></div>
+      </div>
+    </section>
+
+    <section class="rule-shell" id="reglement">
+      <aside class="sidebar">
+        <div class="sidebar-label">NAVIGATION</div>
+        <nav id="categoryNav"></nav>
+        <div class="sidebar-help">
+          <span class="status-dot"></span>
+          <div><strong>Besoin d'aide ?</strong><small>Ouvre un ticket staff sur Discord.</small></div>
+        </div>
+      </aside>
+
+      <div class="content">
+        <div class="content-head">
+          <div>
+            <span class="section-kicker">RÈGLEMENT OFFICIEL</span>
+            <h2>Les règles de Last RP</h2>
+          </div>
+          <div class="search-wrap">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m1.35-5.65A7 7 0 1 1 4 11a7 7 0 0 1 14 0Z"/></svg>
+            <input id="searchInput" type="search" placeholder="Rechercher : Fear RP, braquage..." autocomplete="off" />
+            <kbd>Ctrl K</kbd>
+          </div>
+        </div>
+
+        <div class="notice">
+          <div class="notice-icon">!</div>
+          <div><strong>À retenir</strong><p>Le bon sens et la cohérence de ton personnage priment. Une règle non écrite n'autorise jamais à casser une scène ou à nuire volontairement au RP.</p></div>
+        </div>
+
+        <div id="ruleList" class="rule-list"></div>
+        <div id="emptyState" class="empty-state" hidden>
+          <div>⌕</div>
+          <h3>Aucune règle trouvée</h3>
+          <p>Essaie un autre mot-clé ou une autre catégorie.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sanctions" id="sanctions">
+      <div class="section-kicker">MODÉRATION</div>
+      <h2>Barème indicatif des sanctions</h2>
+      <p class="section-intro">Les sanctions peuvent varier selon la gravité, la récidive, le contexte et l'historique du joueur.</p>
+      <div class="sanction-grid">
+        <article><span>01</span><h3>Rappel</h3><p>Erreur légère, première occurrence ou méconnaissance mineure.</p></article>
+        <article><span>02</span><h3>Avertissement</h3><p>Infraction claire au règlement ou comportement perturbateur.</p></article>
+        <article><span>03</span><h3>Exclusion temporaire</h3><p>Infraction grave, récidive ou atteinte importante à une scène RP.</p></article>
+        <article><span>04</span><h3>Bannissement</h3><p>Triche, toxicité grave, récidives majeures ou comportement nuisible volontaire.</p></article>
+      </div>
+    </section>
+
+    <section class="lexique" id="lexique">
+      <div class="section-kicker">LEXIQUE RP</div>
+      <h2>Les termes à connaître</h2>
+      <div class="lexique-grid" id="lexiqueGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark small">L</span><div><strong>LAST RP</strong><small>Survis. Incarne. Raconte.</small></div></div>
+    <p>© 2026 Last RP — Règlement serveur.</p>
+    <a href="#accueil">Retour en haut ↑</a>
+  </footer>
+
+  <script>
+const config = {
+  serverName: "Last RP",
+  discordUrl: "#" // Remplace par ton lien Discord, ex: https://discord.gg/xxxxx
+};
+
+const categories = [
+  {
+    id: "general", title: "Règles générales", icon: "01",
+    rules: [
+      ["Respect & comportement", "Le respect est obligatoire envers tous les joueurs et membres du staff. Les insultes HRP, le harcèlement, la discrimination, les menaces réelles et la toxicité n'ont pas leur place sur Last RP.", "Comportement", "important"],
+      ["Cohérence du personnage", "Ton personnage doit garder une identité, une histoire et un comportement cohérents. Évite les changements de personnalité uniquement pour obtenir un avantage en scène.", "Immersion"],
+      ["RP avant la victoire", "L'objectif n'est pas de gagner chaque scène mais de créer une histoire intéressante. Accepte de perdre, de te faire arrêter, voler ou blesser lorsque la scène le justifie.", "Fair-play", "important"],
+      ["Logiciels et avantages externes", "Toute triche, injection, menu, macro abusive, modification donnant un avantage déloyal ou exploitation volontaire d'un bug est interdite.", "Tolérance zéro", "danger"]
+    ]
+  },
+  {
+    id: "immersion", title: "Immersion & Fair-play", icon: "02",
+    rules: [
+      ["Fear RP", "Tu dois jouer la peur lorsque ton personnage est face à une menace crédible. Une arme braquée, une supériorité numérique évidente ou une situation de danger sérieux doivent influencer tes choix.", "Fear RP", "important"],
+      ["Pain RP", "Les blessures doivent être jouées de manière cohérente. Une chute, un accident, un tir ou un passage à tabac doivent avoir des conséquences sur ton comportement.", "Pain RP"],
+      ["No Fear Police", "Provoquer volontairement la police sans raison RP, ignorer systématiquement les injonctions armées ou rechercher uniquement la confrontation est interdit.", "Police"],
+      ["Force RP", "Tu ne peux pas imposer une action définitive à un autre joueur sans lui laisser la possibilité de réagir, sauf mécanique prévue par le serveur ou situation RP évidente.", "Interaction"]
+    ]
+  },
+  {
+    id: "meta", title: "Meta & Powergaming", icon: "03",
+    rules: [
+      ["Metagaming", "Utiliser en jeu une information obtenue hors RP — stream, Discord, message privé, vocal externe ou discussion HRP — est interdit.", "Meta", "danger"],
+      ["Powergaming", "Réaliser une action irréaliste, impossible pour un humain ou profiter des limites du jeu pour gagner un avantage RP est interdit.", "Powergaming", "danger"],
+      ["Stream snipe", "Regarder le live d'un joueur pour connaître sa position, ses actions, son identité ou ses projets et utiliser ces informations en jeu est strictement interdit.", "Stream", "danger"],
+      ["Reconnaissance abusive", "Un masque, une tenue générique ou un véhicule ne suffisent pas toujours à identifier quelqu'un. Base ton identification sur des éléments réellement disponibles à ton personnage.", "Cohérence"]
+    ]
+  },
+  {
+    id: "combat", title: "Combat & violence", icon: "04",
+    rules: [
+      ["RDM / Freekill", "Tuer ou blesser gravement un joueur sans raison RP valable, sans interaction préalable ou avec une justification artificielle est interdit.", "RDM", "danger"],
+      ["VDM / Carkill", "Utiliser volontairement un véhicule comme arme contre un joueur sans justification RP forte est interdit. Le véhicule ne doit pas devenir une solution automatique à un conflit.", "VDM", "danger"],
+      ["Combat Log", "Quitter le serveur volontairement pour échapper à une scène, une arrestation, une mort, une poursuite ou une conséquence RP est interdit.", "Déconnexion", "danger"],
+      ["Retour sur zone", "Après avoir quitté une scène violente, ne reviens pas immédiatement uniquement pour reprendre le combat ou récupérer un avantage. Respecte la logique de la scène et les consignes staff.", "Fair-play"]
+    ]
+  },
+  {
+    id: "nlr", title: "NLR & inconscience", icon: "05",
+    rules: [
+      ["New Life Rule", "Après une mort ou une réanimation impliquant une perte de mémoire RP selon la scène, tu ne peux pas revenir pour te venger en utilisant les informations dont ton personnage ne devrait plus se souvenir.", "NLR", "important"],
+      ["Pendant l'inconscience", "Tu ne peux pas parler normalement, transmettre des informations précises, mémoriser des conversations impossibles à entendre ou utiliser un moyen HRP pour appeler de l'aide.", "Inconscience"],
+      ["Réanimation", "Une réanimation ne remet pas instantanément ton personnage en parfaite forme. Joue les douleurs et suis les indications des EMS ou de la scène.", "EMS"]
+    ]
+  },
+  {
+    id: "robberies", title: "Braquages & otages", icon: "06",
+    rules: [
+      ["Otages réels", "Un otage doit être un joueur réellement impliqué dans la scène. Les faux otages, amis complices présentés comme otages ou arrangements HRP sont interdits.", "Otages", "important"],
+      ["Négociation", "Laisse une véritable place à la négociation. Les demandes doivent rester réalistes, réalisables et proportionnées à l'action menée.", "Braquage"],
+      ["Exécution d'un otage", "Tuer un otage doit être une conséquence exceptionnelle et RP, jamais un automatisme pour faire pression ou simplement provoquer les forces de l'ordre.", "Escalade", "danger"],
+      ["Fin de scène", "Une fois la scène terminée, respecte son résultat. Ne relance pas immédiatement une fusillade uniquement pour éviter les conséquences d'une négociation ou d'un échec.", "Fair-play"]
+    ]
+  },
+  {
+    id: "police", title: "Forces de l'ordre", icon: "07",
+    rules: [
+      ["Fear Police", "La présence policière doit être prise au sérieux. Accumuler les provocations uniquement pour déclencher une course-poursuite ou une fusillade est assimilé à du copbait.", "Police"],
+      ["Usage de la force", "Les interactions avec la police doivent suivre une escalade cohérente. Une simple amende ou un contrôle routier ne justifie pas immédiatement l'ouverture du feu.", "Escalade"]
+    ]
+  },
+  {
+    id: "ems", title: "EMS & scènes médicales", icon: "08",
+    rules: [
+      ["Respect du RP médical", "Lorsque les EMS prennent en charge ton personnage, suis la scène et décris tes blessures de façon cohérente. Évite de repartir instantanément comme si rien ne s'était passé.", "EMS"],
+      ["Menacer les EMS", "Les EMS ne doivent pas être pris pour cible gratuitement. Une interaction hostile doit reposer sur une vraie justification RP et respecter les éventuelles règles de protection du serveur.", "Service public"],
+      ["Informations médicales", "N'utilise pas une scène médicale comme moyen HRP de récupérer des informations que ton personnage n'aurait pas pu obtenir normalement.", "Meta"]
+    ]
+  },
+  {
+    id: "vehicles", title: "Véhicules & conduite", icon: "09",
+    rules: [
+      ["Conduite RP", "Adapte ta conduite au véhicule, à la route et au contexte. Rouler constamment à vitesse maximale en ville, prendre des sauts absurdes ou ignorer tous les accidents casse l'immersion.", "Conduite"],
+      ["Accidents", "Un accident sérieux doit entraîner du Pain RP et peut mettre fin à une poursuite si ton véhicule ou ton personnage n'est plus en état de continuer.", "Pain RP"],
+      ["Véhicules off-road", "Un véhicule non adapté ne doit pas gravir n'importe quelle montagne ou traverser tous les terrains comme un 4x4. Respecte les capacités réalistes du véhicule.", "Cohérence"]
+    ]
+  },
+  {
+    id: "zones", title: "Zones & environnement", icon: "10",
+    rules: [
+      ["Zones sensibles", "Les hôpitaux, lieux de spawn, garages principaux et autres zones définies comme sensibles doivent rester jouables. Le spawnkill, le camping abusif ou le blocage volontaire y sont interdits.", "Safezone"],
+      ["Intérieurs & props", "N'exploite pas un décor, une collision, un glitch ou une zone inaccessible pour tirer, te cacher ou échapper à une scène.", "Exploit", "danger"],
+      ["Respect de l'environnement", "Le monde doit être considéré comme vivant. Les PNJ, caméras, lieux publics et témoins peuvent avoir une importance RP selon le contexte.", "Immersion"]
+    ]
+  },
+  {
+    id: "death", title: "Mort RP", icon: "11",
+    rules: [
+      ["Mort RP encadrée", "La mort définitive d'un personnage doit suivre les procédures prévues par Last RP. Elle ne peut pas être imposée arbitrairement sans respecter les conditions du serveur.", "Mort RP", "important"],
+      ["Dossier & justification", "Une demande de Mort RP doit reposer sur un contexte solide, des preuves et une histoire construite. Une simple dispute ou un conflit récent ne suffit pas.", "Dossier"],
+      ["Conséquences", "Une Mort RP validée met fin à l'histoire du personnage concerné. Les informations, relations et possessions ne doivent pas être transférées artificiellement au personnage suivant.", "Nouveau personnage"]
+    ]
+  },
+  {
+    id: "staff", title: "Staff & signalements", icon: "12",
+    rules: [
+      ["Ne pas interrompre une scène", "Sauf problème grave, termine la scène avant de faire un report. Les désaccords de règlement se traitent ensuite avec des preuves lorsque c'est possible.", "Support"],
+      ["Respect des décisions", "Une décision staff doit être respectée sur le moment. Si tu la contestes, utilise le système de ticket ou d'appel prévu sans créer de conflit public.", "Staff"],
+      ["Preuves", "Pour un signalement complexe, fournis des éléments clairs : clip, capture, heure approximative, identifiants et contexte. Les preuves doivent être authentiques et non manipulées.", "Report"],
+      ["Mensonge au staff", "Mentir volontairement, falsifier une preuve ou cacher un élément important lors d'un ticket peut entraîner une sanction aggravée.", "Intégrité", "danger"]
+    ]
+  }
+];
+
+const lexique = [
+  ["Fear RP", "Jouer la peur et l'instinct de survie face à un danger crédible."],
+  ["Pain RP", "Jouer les conséquences physiques et mentales d'une blessure ou d'un accident."],
+  ["Metagaming", "Utiliser en RP une information obtenue hors du jeu ou hors de la connaissance du personnage."],
+  ["Powergaming", "Forcer ou réaliser des actions irréalistes pour obtenir un avantage."],
+  ["RDM", "Tuer ou attaquer sans raison RP valable."],
+  ["VDM", "Utiliser abusivement un véhicule comme arme."],
+  ["Combat Log", "Se déconnecter pour fuir une conséquence ou une scène RP."],
+  ["NLR", "Ne pas exploiter les informations d'une vie ou scène que le personnage est censé avoir oubliée."],
+  ["Copbait", "Provoquer volontairement la police uniquement pour obtenir une réaction ou une poursuite."]
+];
+
+const nav = document.getElementById("categoryNav");
+const list = document.getElementById("ruleList");
+const search = document.getElementById("searchInput");
+const empty = document.getElementById("emptyState");
+const discordLink = document.getElementById("discordLink");
+
+discordLink.href = config.discordUrl;
+
+function escapeRegex(v){return v.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");}
+function highlight(text, q){
+  if(!q) return text;
+  const re = new RegExp(`(${escapeRegex(q)})`, "ig");
+  return text.replace(re, "<mark>$1</mark>");
+}
+
+function render(filter = ""){
+  const q = filter.trim().toLowerCase();
+  nav.innerHTML = "";
+  list.innerHTML = "";
+  let total = 0;
+
+  categories.forEach((cat, index) => {
+    const matches = cat.rules.filter(rule => !q || [cat.title, ...rule].join(" ").toLowerCase().includes(q));
+    if(!matches.length) return;
+    total += matches.length;
+
+    const a = document.createElement("a");
+    a.className = "category-link";
+    a.href = `#${cat.id}`;
+    a.textContent = cat.title;
+    a.dataset.target = cat.id;
+    nav.appendChild(a);
+
+    const section = document.createElement("section");
+    section.className = "rule-category";
+    section.id = cat.id;
+    section.innerHTML = `<div class="category-header"><h3>${cat.icon}. ${highlight(cat.title, q)}</h3><span>${matches.length} RÈGLE${matches.length>1?"S":""}</span></div>`;
+
+    matches.forEach((rule, idx) => {
+      const [title, desc, tag, style=""] = rule;
+      const card = document.createElement("article");
+      card.className = `rule-card ${style}`;
+      card.innerHTML = `<div class="rule-icon">${String(idx+1).padStart(2,"0")}</div><div><h4>${highlight(title,q)}</h4><p>${highlight(desc,q)}</p><span class="tag">${highlight(tag,q)}</span></div>`;
+      section.appendChild(card);
+    });
+    list.appendChild(section);
+  });
+
+  empty.hidden = total > 0;
+  observeSections();
+}
+
+function observeSections(){
+  const links = [...document.querySelectorAll(".category-link")];
+  if(!links.length) return;
+  const sections = links.map(l => document.getElementById(l.dataset.target)).filter(Boolean);
+  const observer = new IntersectionObserver(entries => {
+    const visible = entries.filter(e => e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+    if(!visible) return;
+    links.forEach(l => l.classList.toggle("active", l.dataset.target === visible.target.id));
+  }, {rootMargin:"-15% 0px -68% 0px", threshold:[0,.1,.5]});
+  sections.forEach(s => observer.observe(s));
+}
+
+search.addEventListener("input", e => render(e.target.value));
+
+document.addEventListener("keydown", e => {
+  if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k"){
+    e.preventDefault(); search.focus();
+  }
+  if(e.key === "Escape") search.blur();
+});
+
+document.getElementById("openSearch").addEventListener("click", () => {
+  document.getElementById("reglement").scrollIntoView({behavior:"smooth"});
+  setTimeout(() => search.focus(), 450);
+});
+
+document.getElementById("lexiqueGrid").innerHTML = lexique.map(([t,d]) => `<article class="lexique-item"><strong>${t}</strong><p>${d}</p></article>`).join("");
+
+render();
+
+</script>
+</body>
+</html>
