@@ -62,7 +62,7 @@ a{color:inherit;text-decoration:none}.topbar{height:76px;display:flex;align-item
         <button class="ghost-btn" id="openSearch">Rechercher une règle</button>
       </div>
       <div class="hero-stats">
-        <div><strong>12</strong><span>catégories</span></div>
+        <div><strong>13</strong><span>catégories</span></div>
         <div><strong>RP</strong><span>avant tout</span></div>
         <div><strong>24/7</strong><span>fair-play</span></div>
       </div>
@@ -182,7 +182,16 @@ const categories = [
     ]
   },
   {
-    id: "robberies", title: "Braquages & otages", icon: "06",
+    id: "illegal", title: "Illégal", icon: "06",
+    rules: [
+      ["Motivation RP", "Une action illégale doit avoir une logique RP : argent, rivalité, organisation, survie ou intérêt narratif. Le chaos gratuit et les attaques sans objectif sont interdits.", "Illégal"],
+      ["Conflits entre groupes", "Les guerres doivent être construites et progressives. Une simple provocation ne justifie pas automatiquement une escalade massive ou des exécutions répétées.", "Groupes"],
+      ["Pillage", "Le dépouillement doit rester cohérent et proportionné. Vider systématiquement l'inventaire de chaque joueur sans raison RP est interdit.", "Fair-play"],
+      ["Armes", "Sortir une arme doit être justifié par le niveau de menace. Une arme lourde ne doit pas devenir une réponse automatique à une interaction banale.", "Escalade"]
+    ]
+  },
+  {
+    id: "robberies", title: "Braquages & otages", icon: "07",
     rules: [
       ["Otages réels", "Un otage doit être un joueur réellement impliqué dans la scène. Les faux otages, amis complices présentés comme otages ou arrangements HRP sont interdits.", "Otages", "important"],
       ["Négociation", "Laisse une véritable place à la négociation. Les demandes doivent rester réalistes, réalisables et proportionnées à l'action menée.", "Braquage"],
@@ -191,14 +200,15 @@ const categories = [
     ]
   },
   {
-    id: "police", title: "Forces de l'ordre", icon: "07",
+    id: "police", title: "Forces de l'ordre", icon: "08",
     rules: [
       ["Fear Police", "La présence policière doit être prise au sérieux. Accumuler les provocations uniquement pour déclencher une course-poursuite ou une fusillade est assimilé à du copbait.", "Police"],
+      ["Corruption", "Toute corruption d'un agent doit respecter les règles spécifiques du serveur et, lorsqu'il y en a, les validations prévues par la direction ou le staff.", "Légal"],
       ["Usage de la force", "Les interactions avec la police doivent suivre une escalade cohérente. Une simple amende ou un contrôle routier ne justifie pas immédiatement l'ouverture du feu.", "Escalade"]
     ]
   },
   {
-    id: "ems", title: "EMS & scènes médicales", icon: "08",
+    id: "ems", title: "EMS & scènes médicales", icon: "09",
     rules: [
       ["Respect du RP médical", "Lorsque les EMS prennent en charge ton personnage, suis la scène et décris tes blessures de façon cohérente. Évite de repartir instantanément comme si rien ne s'était passé.", "EMS"],
       ["Menacer les EMS", "Les EMS ne doivent pas être pris pour cible gratuitement. Une interaction hostile doit reposer sur une vraie justification RP et respecter les éventuelles règles de protection du serveur.", "Service public"],
@@ -206,7 +216,7 @@ const categories = [
     ]
   },
   {
-    id: "vehicles", title: "Véhicules & conduite", icon: "09",
+    id: "vehicles", title: "Véhicules & conduite", icon: "10",
     rules: [
       ["Conduite RP", "Adapte ta conduite au véhicule, à la route et au contexte. Rouler constamment à vitesse maximale en ville, prendre des sauts absurdes ou ignorer tous les accidents casse l'immersion.", "Conduite"],
       ["Accidents", "Un accident sérieux doit entraîner du Pain RP et peut mettre fin à une poursuite si ton véhicule ou ton personnage n'est plus en état de continuer.", "Pain RP"],
@@ -214,7 +224,7 @@ const categories = [
     ]
   },
   {
-    id: "zones", title: "Zones & environnement", icon: "10",
+    id: "zones", title: "Zones & environnement", icon: "11",
     rules: [
       ["Zones sensibles", "Les hôpitaux, lieux de spawn, garages principaux et autres zones définies comme sensibles doivent rester jouables. Le spawnkill, le camping abusif ou le blocage volontaire y sont interdits.", "Safezone"],
       ["Intérieurs & props", "N'exploite pas un décor, une collision, un glitch ou une zone inaccessible pour tirer, te cacher ou échapper à une scène.", "Exploit", "danger"],
@@ -222,7 +232,7 @@ const categories = [
     ]
   },
   {
-    id: "death", title: "Mort RP", icon: "11",
+    id: "death", title: "Mort RP", icon: "12",
     rules: [
       ["Mort RP encadrée", "La mort définitive d'un personnage doit suivre les procédures prévues par Last RP. Elle ne peut pas être imposée arbitrairement sans respecter les conditions du serveur.", "Mort RP", "important"],
       ["Dossier & justification", "Une demande de Mort RP doit reposer sur un contexte solide, des preuves et une histoire construite. Une simple dispute ou un conflit récent ne suffit pas.", "Dossier"],
@@ -230,7 +240,7 @@ const categories = [
     ]
   },
   {
-    id: "staff", title: "Staff & signalements", icon: "12",
+    id: "staff", title: "Staff & signalements", icon: "13",
     rules: [
       ["Ne pas interrompre une scène", "Sauf problème grave, termine la scène avant de faire un report. Les désaccords de règlement se traitent ensuite avec des preuves lorsque c'est possible.", "Support"],
       ["Respect des décisions", "Une décision staff doit être respectée sur le moment. Si tu la contestes, utilise le système de ticket ou d'appel prévu sans créer de conflit public.", "Staff"],
